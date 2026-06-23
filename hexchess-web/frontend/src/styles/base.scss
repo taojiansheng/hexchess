@@ -1,0 +1,83 @@
+:root {
+  --bg: #101820;
+  --panel: #17222c;
+  --panel-soft: #1d2b36;
+  --line: rgba(232, 225, 212, 0.14);
+  --text: #f4efe6;
+  --muted: #aeb8bd;
+  --gold: #c8a45d;
+  --green: #6fa87a;
+  --red: #d5564d;
+  --blue: #4f83cc;
+  --cell: #d4c39e;
+  --cell-edge: #6e6047;
+  --shadow: rgba(0, 0, 0, 0.32);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 22% 12%, rgba(200, 164, 93, 0.13), transparent 30%),
+    #101820;
+  background-size: 44px 44px, 44px 44px, auto, auto;
+}
+
+.icon-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--line);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.primary-button,
+.secondary-button {
+  min-height: 42px;
+  border-radius: 6px;
+  padding: 0 16px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.primary-button {
+  background: var(--gold);
+  color: #1b1710;
+}
+
+.secondary-button {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--line);
+}

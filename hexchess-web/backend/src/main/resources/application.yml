@@ -1,0 +1,24 @@
+# 服务器配置
+server:
+  port: 8080  # 服务端口
+
+# Spring配置
+spring:
+  datasource:
+    # MySQL连接信息：数据库hexchess，端口3307（我的是3307，这里你需要改成3306）
+    url: jdbc:mysql://localhost:3307/hexchess?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root    # 数据库用户名
+    password: 770329  # 数据库密码
+  jpa:
+    hibernate:
+      ddl-auto: update    # 自动更新表结构
+    open-in-view: false   # 关闭OpenSessionInView
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect  # MySQL8方言
+        format_sql: true   # 格式化SQL输出
+
+# 六边形棋游戏配置
+hexchess:
+  board-size: 11          # 棋盘大小（11x11）
+  cors-origin: http://localhost:8081  # 前端CORS跨域地址
